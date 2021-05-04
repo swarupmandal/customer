@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class CustomerDetailsController {
 
-	@Value("${my.greeting.cust.dev}")
+	@Value("${my.greeting.cust.dev:}")
 	private String greetingMessage;
 
-	@Value("${db.url.cust.dev}")
+	@Value("${db.url.cust.dev:}")
 	private String dbURL;
 	
 	@GetMapping(value = "/customer-details", produces = MediaType.TEXT_PLAIN_VALUE)

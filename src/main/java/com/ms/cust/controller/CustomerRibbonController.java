@@ -52,7 +52,7 @@ public class CustomerRibbonController {
 		return customerService.login(loginDto);		
 	}
 	
-	@GetMapping(value = "/customers/{phoneNo}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/customers-ribbon/{phoneNo}")
 	public CustomerDto getCustomerProfile(@PathVariable Long phoneNo) {
 		logger.info("Customer profile request ", phoneNo);
 		CustomerDto dto = customerService.getCustomerProfile(phoneNo);
